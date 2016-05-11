@@ -1,0 +1,1 @@
+var setup=require("./setup"),stmp=require("./mailer");exports.send=function(t){setup.init(t,function(){stmp.send(setup)})},exports.sendOption=function(t,n){setup.init(t,function(){stmp.send_option(setup,n)})},exports.sendTo=function(t,n){setup.init(t,function(){stmp.send_to(setup,n)})};

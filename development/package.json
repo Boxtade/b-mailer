@@ -1,0 +1,22 @@
+{
+  "name": "b-mailer",
+  "version": "0.0.0",
+  "keywords": [
+    "e-mail",
+    "Mailgun",
+    "SMTP"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Boxtade/b-mailer.git"
+  },
+  "dependencies": {
+    "nodemailer": "^2.3.2"
+  },
+  "readmeFilename": "ReadMe.md",
+  "main": "./js/b-mailer.js",
+  "files": [
+    "js/",
+    "LICENSE"
+  ]
+}
