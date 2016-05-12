@@ -2,7 +2,7 @@ var nodemailer = require('nodemailer');
 var fs = require("fs");
 
 
-exports.send = function(setup) {
+exports.send = function(setup,callback) {
 
     var transporter = nodemailer.createTransport(setup.options());
 
@@ -21,12 +21,15 @@ exports.send = function(setup) {
                 if (err) {
                     fs.appendFile('bmailer.log',err);
                 }
+                
+                if(callback !== undefined)
+                    callback();
             });
         }
     });
 };
 
-exports.send_option = function(setup,option) {
+exports.send_option = function(setup,option,callback) {
 
     var transporter = nodemailer.createTransport(setup.options());
 
@@ -38,12 +41,15 @@ exports.send_option = function(setup,option) {
                 if (err) {
                     fs.appendFile('bmailer.log',err);
                 }
+
+                if(callback !== undefined)
+                    callback();
             });
         }
     });
 };
 
-exports.send_to = function(setup,to) {
+exports.send_to = function(setup,to,callback) {
 
     var transporter = nodemailer.createTransport(setup.options());
 
@@ -62,6 +68,9 @@ exports.send_to = function(setup,to) {
                 if (err) {
                     fs.appendFile('bmailer.log',err);
                 }
+
+                if(callback !== undefined)
+                    callback();
             });
         }
     });
