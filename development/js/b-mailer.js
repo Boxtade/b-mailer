@@ -27,5 +27,3 @@ exports.sendOptionSync = function(setupFile,option, callback){
 exports.sendToSync = function(setupFile,to, callback){
     setup.init(setupFile, function(){stmp.send_to(setup,to,callback);});
 };
-
-

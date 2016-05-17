@@ -37,7 +37,7 @@ exports.to = function(){
 
 exports.subject = function(){
     return setup.subject;
-}
+};
 
 exports.template = function(){
     return setup.template;
