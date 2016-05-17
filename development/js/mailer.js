@@ -19,7 +19,7 @@ exports.send = function(setup,callback) {
             };
             transporter.sendMail(mailOptions, function (err, info) {
                 if (err) {
-                    fs.appendFile('bmailer.log',err);
+                    fs.appendFile('bmailer.log',"Line 22, mailer.je : "+err+"\n");
                 }
                 
                 if(callback !== undefined)
@@ -39,7 +39,7 @@ exports.send_option = function(setup,option,callback) {
         } else {
             transporter.sendMail(option, function (err, info) {
                 if (err) {
-                    fs.appendFile('bmailer.log',err);
+                    fs.appendFile('bmailer.log',"Line 42, mailer.je : "+err+"\n");
                 }
 
                 if(callback !== undefined)
@@ -66,7 +66,7 @@ exports.send_to = function(setup,to,callback) {
             };
             transporter.sendMail(mailOptions, function (err, info) {
                 if (err) {
-                    fs.appendFile('bmailer.log',err);
+                    fs.appendFile('bmailer.log',"Line 69, mailer.je : "+err+"\n");
                 }
 
                 if(callback !== undefined)
